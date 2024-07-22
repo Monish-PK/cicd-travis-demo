@@ -29,7 +29,7 @@ script:
   - mvn test
   - mvn clean package
   # Create Docker image for our app and push it to Dockerhub repository
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "Abcd@12345" | docker login -u "monishpk" --password-stdin
   - docker build -t travis-demo .
   - docker images
   - docker tag travis-demo interviewdot/travis-demo
@@ -38,6 +38,6 @@ script:
 # Send the message of success after the docker image is pushed to dockerhub
 notifications:
   email:
-    - interviewdot@gmail.com
+    - monishpk1401@gmail.com
 
 
